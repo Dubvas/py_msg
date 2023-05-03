@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		DubChat
+	</title>
+	<link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+	<link rel="stylesheet" href="/static/main.css">
+	<script type="text/javascript" src="/static/jquery.min.js"></script>
+	<script type="text/javascript" src="/static/chat_script.js"></script>
+</head>
+<body>
+	<div id="IDholder" visibility="hidden">{{chatID}}</div>
+	<header>
+		<h1>CHAT {{chatName}}</h1>
+	</header>
+	<div class="chat_window">
+		{%for i in range(0, ln)%}
+			<div class="message_wrapper">
+				<div class="author_wrapper">
+					<strong class="author">{{messages[i].author}} :</strong>
+				</div>
+				<div class="text_wrapper">
+					{{messages[i].text}}
+				</div>
+				<br>
+			</div>
+		{%endfor%}
+	</div>
+	<div class="send_window">
+		<textarea id="message">Enter your message</textarea>
+		<button onclick="SendMsg()">Send!</button>
+	</div>
+	<h4 class="error_wrapper">{{ error }}</h4>
+</body>
+</html>

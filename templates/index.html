@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		DubChat
+	</title>
+	<link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+	<link rel="stylesheet" href="/static/main.css">
+	<script type="text/javascript" src="/static/jquery.min.js"></script>
+	<script type="text/javascript" src="/static/main.js"></script>
+</head>
+<body>
+	<header>
+		<h1>HELLO {{testt}}</h1>
+	</header>
+	<div class="chats_wrapper">
+		{%for i in range(0, ln)%}
+			<div class="chat_box">
+				<a href="chat/{{chatIDs[i]}}">{{chatNames[i]}}</a>
+			</div>
+			<br>
+		{%endfor%}
+	</div>
+	<a href="/make_chat">Make chat</a>
+	<a href="/logout">Logout</a>
+</body>
+</html>

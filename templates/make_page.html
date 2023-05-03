@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		DubChat
+	</title>
+	<link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+	<link rel="stylesheet" href="/static/main.css">
+	<script type="text/javascript" src="/static/jquery.min.js"></script>
+	<script type="text/javascript" src="/static/make_script.js"></script>
+</head>
+<body>
+	<header>
+		<h1>
+			Make new chat
+		</h1>
+	</header>
+	<form method="POST" action="/make_chat" id="chat_form">
+		<label for="chat_name"><b>Chat Name</b></label>
+		<input type="text" placeholder="Enter chat name" name="chat_name" required>
+		<br>
+		<textarea name="users" form="chat_form">Enter usernames here, new line separated</textarea>
+		<br>
+		<button type="submit">Submit</button>
+	</form>
+
+	<h4 class="error_wrapper">{{ error }}</h4>
+</body>
+</html>

@@ -44,7 +44,7 @@ jobs:
 
   trigger-cd:
     needs: build-and-push
-    if: ${{ github.ref == 'refs/heads/master' }}
+    if: ${{ github.ref == 'refs/heads/dev' }}
     runs-on: ubuntu-latest
     steps:
     - name: extract short sha
